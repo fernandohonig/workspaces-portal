@@ -14,7 +14,7 @@
             "Description": "Name of the new S3 Bucket to Host Site",
             "Type": "String",
             "AllowedPattern": "[a-z0-9-]+",
-            "Default": "eeg3-serverless-template"
+            "Default": "nubego-workspaces-portal"
         },
         "CognitoPool": {
             "Description": "Name for the Cognito Pool",
@@ -38,7 +38,8 @@
         },
         "GitHubRepoName": {
             "Type": "String",
-            "Description": "The GitHub repo name"
+            "Description": "The GitHub repo name",
+            "Default": "workspaces-portal"
         },
         "GitHubRepoBranch": {
             "Type": "String",
@@ -47,7 +48,8 @@
         },
         "GitHubUser": {
             "Type": "String",
-            "Description": "GitHub UserName. This username must have access to the GitHubToken."
+            "Description": "GitHub UserName. This username must have access to the GitHubToken.",
+            "Default": "fernandohonig"
         },
         "GitHubToken": {
             "NoEcho": true,
