@@ -5,7 +5,7 @@ window._config = {
         region: 'eu-west-2' // e.g. us-east-2
     },
     api: {
-        invokeUrl: 'https://5ogxb9bsn4.execute-api.eu-west-2.amazonaws.com/Prod' // e.g. https://rc7nyt4tql.execute-api.us-west-2.amazonaws.com/prod',
+        invokeUrl: 'https://xx3ol5x895.execute-api.eu-west-2.amazonaws.com/Prod' // e.g. https://rc7nyt4tql.execute-api.us-west-2.amazonaws.com/prod',
     },
     approval: {
         email: 'info@nubego.io'
