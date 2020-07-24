@@ -521,30 +521,26 @@ exports.handler = (event, context, callback) => {
             });
         }
 
-        // Get the Amazon-owned bundle list first, and then get the Customer-owned bundles next, and then return the entire list.
+        // Get the Customer-owned bundles.
+        
         getBundles({
-                Owner: "AMAZON"
+                Owner: null
             },
             function () {
-                getBundles({
-                        Owner: null
-                    },
-                    function () {
-                        callback(null, {
-                            statusCode: 200,
-                            body: JSON.stringify({
-                                Result: bundleList
-                            }),
-                            headers: {
-                                "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
-                                "Access-Control-Allow-Methods": "GET,OPTIONS",
-                                "Access-Control-Allow-Origin": originURL
-                            }
-                        });
+                callback(null, {
+                    statusCode: 200,
+                    body: JSON.stringify({
+                        Result: bundleList
+                    }),
+                    headers: {
+                        "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+                        "Access-Control-Allow-Methods": "GET,OPTIONS",
+                        "Access-Control-Allow-Origin": originURL
                     }
-                );
+                });
             }
         );
+        
     } else {
         console.log("No action specified.");
         callback(null, {
