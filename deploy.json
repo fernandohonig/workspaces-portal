@@ -13,7 +13,7 @@
         "BucketName": {
             "Description": "Name of the new S3 Bucket to Host Site",
             "Type": "String",
-            "AllowedPattern": "[a-z0-9-]+",
+            "AllowedPattern": "[a-z0-9-.]+",
             "Default": "nubego-workspaces-portal"
         },
         "CognitoPool": {
